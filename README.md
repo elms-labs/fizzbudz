@@ -12,3 +12,6 @@
 - <code>npm install</code> 
 - <code>cd server && npm run dev</code>
 
+#### Client ID: **f21f90d98ed70b6a146a**
+
+### Client Secret: **e20570a3e38bbdebf630b0b087e43d0dedad29d7**
