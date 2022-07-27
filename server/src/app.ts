@@ -1,14 +1,24 @@
 import express, { Request, Response, NextFunction, RequestHandler } from 'express';
-// import { playerController } from './playerController';
+import apiRouter from './routes/apiRouter';
+import cookieParser from "cookie-parser";
+import engRouter from './routes/routes';
+import cors from "cors";
 
 const app = express();
 
-const engRouter = require('./routes/routes');
 
 app.use(express.json());
 
-// app.get('/api', playerController.getScores, (req, res, next) => res.json(res.locals.scores));
-// app.post('/api', playerController.updateScores, (req, res, next) => res.json(res.locals.scores));
+app.use(cookieParser());
+
+app.use(
+  cors({
+    origin: "https://localhost:4000",
+    credentials: true,
+  })
+);
+
+app.use('/api', apiRouter);
 
 app.use('/api', engRouter);
 

@@ -10,4 +10,4 @@ router.post('/engineers', engineerController.addEngineers, (req: Request, res: R
   res.status(200).json(res.locals.newEngineer)
 });
 
-module.exports = router;
+export default router;

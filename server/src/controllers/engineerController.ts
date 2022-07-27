@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-const db = require('../models/engineerModel');
+import db from '../models/engineerModel';
 
 // Make a controller method to get all engineers
 // Make a query that can get all engineers and pass into controller
