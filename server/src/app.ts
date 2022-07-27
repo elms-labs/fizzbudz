@@ -1,11 +1,11 @@
 import express, { Request, Response, NextFunction, RequestHandler } from 'express';
 import apiRouter from './routes/apiRouter';
 import cookieParser from "cookie-parser";
+import engRouter from './routes/routes';
 import cors from "cors";
 
 const app = express();
 
-const engRouter = require('./routes/routes');
 
 app.use(express.json());
 
