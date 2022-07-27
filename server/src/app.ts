@@ -5,6 +5,8 @@ import cors from "cors";
 
 const app = express();
 
+const engRouter = require('./routes/routes');
+
 app.use(express.json());
 
 app.use(cookieParser());
@@ -18,11 +20,16 @@ app.use(
 
 app.use('/api', apiRouter);
 
+app.use('/api', engRouter);
+
+// Define server error type
 type ServerError = {
     log: string,
     status: number,
     message: {err: string}
 }
+
+app.use('*', (req, res) => res.status(404).send('Woops! Page not found!'));
 
 app.use('/', (err: ServerError, req: Request, res: Response, next: NextFunction) => {
   const defaultErr: ServerError = {
@@ -36,3 +43,5 @@ app.use('/', (err: ServerError, req: Request, res: Response, next: NextFunction)
 })
 
 app.listen(3000, () => console.log('server is listening on port 3000'));
+
+module.exports = app;
