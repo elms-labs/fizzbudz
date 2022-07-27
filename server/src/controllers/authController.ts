@@ -71,7 +71,6 @@ export default async function authController(req: Request, res: Response, next: 
     const code = get(req, "query.code");
     const path = get(req, "query.code", '/');
 
-
     if (!code) {
         throw new Error("No Code!")
     }
