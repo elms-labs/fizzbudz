@@ -7,6 +7,7 @@ import MainPage from './containers/MainPage';
 import MainContainer from './containers/MainContainer';
 import NotificationContainer from './containers/NotificationContainer';
 import UserContainer from './containers/UserContainer';
+import Skills from './components/Skills';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LoginPage />} />
         <Route path='form' element={<Form />} />
+        <Route path='skills' element={<Skills />} />
         <Route path='home' element={<MainPage />}>
           <Route index element={<MainContainer />} />
           <Route path='all' element={<MainContainer />} />
