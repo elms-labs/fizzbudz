@@ -15,8 +15,8 @@ export default function Header() {
         <nav className='flex items-center gap-5'>
           <Link to='/home/notifications'>
             <IconButton>
-              <Badge color='primary' badgeContent={5} max={99}>
-                <NotificationsIcon className='text-red-500' fontSize='large' />
+              <Badge color='primary' badgeContent={5} max={10}>
+                <NotificationsIcon className='hover:text-red-400 text-red-500' fontSize='large' />
               </Badge>
             </IconButton>
           </Link>
