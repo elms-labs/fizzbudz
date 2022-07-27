@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        129000: "1rem",
+      },
       colors: {
         "coding-red": "#D85B5F",
       },
