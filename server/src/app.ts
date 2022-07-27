@@ -1,10 +1,20 @@
 import express, { Request, Response, NextFunction, RequestHandler } from 'express';
 import apiRouter from './routes/apiRouter';
+import cookieParser from "cookie-parser";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
 
+app.use(cookieParser());
+
+app.use(
+  cors({
+    origin: "https://localhost:4000",
+    credentials: true,
+  })
+);
 
 app.use('/api', apiRouter);
 
