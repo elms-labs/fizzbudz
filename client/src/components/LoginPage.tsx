@@ -19,7 +19,7 @@ const LoginPage = () => {
             className='flex justify-start items-center flex-wrap'
             id='startBtnsWrapper'
           >
-            <button className='bg-coding-red py-3 px-6 text-lg rounded-md w-48 flex items-center justify-center gap-2 '>
+            <a href='/' className='bg-coding-red py-3 px-6 text-lg rounded-md w-48 flex items-center justify-center gap-2 '>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='h-6 w-6'
@@ -35,7 +35,7 @@ const LoginPage = () => {
                 />
               </svg>
               <span>Login with GitHub</span>
-            </button>
+            </a>
           </div>
         </div>
         <img className='md:w-2/4 mr-[50px]' id='codingImg' src={coding} />
